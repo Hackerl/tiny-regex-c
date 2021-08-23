@@ -11,19 +11,15 @@
 #include "re.h"
 
 
-int main(int argc, char** argv)
-{
-  int length;
-  if (argc == 3)
-  {
-    int m = re_match(argv[1], argv[2], &length);
-    if (m != -1)
-      return 0;
-  }
-  else
-  {
-    printf("\nUsage: %s <PATTERN> <TEXT> \n", argv[0]);
-  }
-  return -2;
+int main(int argc, char **argv) {
+    int length;
+    if (argc == 3) {
+        int m = re_match(argv[1], argv[2], &length);
+        if (m != -1)
+            return 0;
+    } else {
+        printf("\nUsage: %s <PATTERN> <TEXT> \n", argv[0]);
+    }
+    return -2;
 }
 
